@@ -1,0 +1,12 @@
+[Unit]
+Description=Wordpress Cron
+After=mysql.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+User=root
+ExecStart=/opt/wp-cron/service.sh
+
+[Install]
